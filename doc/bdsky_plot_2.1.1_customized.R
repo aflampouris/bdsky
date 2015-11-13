@@ -16,7 +16,11 @@ bdsky <-
     
     # Parameters are read from a csv file in the working directory.
     # This allows for multiple files to be processed at once.
+    
     parameters <- read.table(file, sep = ",", header = T)
+    
+    # Parameters per file are extracted from "Parameters.csv"
+
     loglist = as.character(parameters[, 1])
     burninpercent = parameters[, 4]
     recent = parameters[, 2]
